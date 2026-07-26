@@ -1,0 +1,39 @@
+# Site settings
+title: Martyn Fagg
+tagline: "Technology & operations leader — CTO, COO & CIO"
+description: >-
+  Martyn Fagg is a B2B SaaS technology and operations leader, currently CTO, COO
+  and CIO at Tillo. Co-organiser of Brighton CTO and Vice-Commodore of Sailing
+  at CMYC. Writing on AI and leadership.
+url: "https://muphi.com"
+baseurl: ""
+
+author:
+  name: Martyn Fagg
+  linkedin: martynfagg
+
+# Build settings
+permalink: /writing/:title/
+markdown: kramdown
+highlighter: rouge
+
+# Show latest N posts on the homepage
+home_posts_limit: 3
+
+# Plugins (all supported natively by GitHub Pages)
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Sass
+sass:
+  style: compressed
+
+# Exclude from build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .sass-cache

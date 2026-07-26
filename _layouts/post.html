@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<article class="article">
+  <div class="wrap">
+    <a class="back-link" href="/writing/">&larr; All writing</a>
+
+    <header class="article__head">
+      <span class="eyebrow">Writing</span>
+      <h1>{{ page.title }}</h1>
+      <div class="article__meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time>
+        {%- if page.reading_time %}<span>{{ page.reading_time }}</span>{% endif -%}
+      </div>
+    </header>
+
+    <div class="prose">
+      {{ content }}
+    </div>
+
+    <hr style="border:0;border-top:1px solid var(--hairline);margin:3rem 0 1.5rem;">
+    <a class="back-link" href="/writing/">&larr; All writing</a>
+  </div>
+</article>

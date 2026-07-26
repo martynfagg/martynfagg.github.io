@@ -1,0 +1,35 @@
+---
+layout: default
+title: Writing
+description: Occasional writing from Martyn Fagg on AI, leadership, and scaling B2B SaaS.
+permalink: /writing/
+---
+
+<section class="page-head">
+  <div class="wrap">
+    <span class="eyebrow">Writing</span>
+    <h1>Notes on AI &amp; leadership</h1>
+    <p>Occasional pieces on technology, operations and what it takes to lead through change. No schedule — just when I have something worth saying.</p>
+  </div>
+</section>
+
+<section class="section" style="border-top:1px solid var(--hairline);padding-top:clamp(2rem,5vw,3.5rem);">
+  <div class="wrap">
+    <div class="posts">
+      {%- if site.posts.size > 0 -%}
+        {%- for post in site.posts -%}
+        <a class="post-card" href="{{ post.url }}">
+          <span class="post-card__date">{{ post.date | date: "%-d %b %Y" }}</span>
+          <div>
+            <h2 class="post-card__title">{{ post.title }}</h2>
+            <p class="post-card__excerpt">{{ post.description | default: post.excerpt | strip_html | truncate: 180 }}</p>
+            <span class="post-card__more">Read &rarr;</span>
+          </div>
+        </a>
+        {%- endfor -%}
+      {%- else -%}
+        <p class="empty-note">First post coming soon.</p>
+      {%- endif -%}
+    </div>
+  </div>
+</section>

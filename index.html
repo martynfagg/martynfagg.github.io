@@ -1,0 +1,149 @@
+---
+layout: default
+---
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero__grid">
+      <div class="hero__intro">
+        <span class="eyebrow reveal" data-d="1">Technology &amp; operations leadership</span>
+        <h1 class="reveal" data-d="2">Building &amp; scaling<br>B2B SaaS,<br><span class="accent">the operator's way.</span></h1>
+        <p class="hero__lead reveal" data-d="3">I'm Martyn Fagg — CTO, COO &amp; CIO at Tillo, where I've spent a decade turning technology and operations into durable commercial advantage.</p>
+        <div class="hero__actions reveal" data-d="4">
+          <a class="btn btn--primary" href="https://www.linkedin.com/in/martynfagg" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zM8.5 8h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4.03 0 4.78 2.65 4.78 6.1V24h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.65 1.8-2.65 3.65V24h-4V8z"/></svg>
+            Connect on LinkedIn
+          </a>
+          <a class="btn btn--ghost" href="#work">See the work &darr;</a>
+        </div>
+      </div>
+
+      <div class="hero__portrait reveal" data-d="3">
+        <figure class="portrait">
+          <!-- Replace the placeholder below with: <img src="/assets/img/martyn.jpg" alt="Martyn Fagg"> -->
+          <figcaption class="portrait__ph">
+            <strong>MF</strong>
+            Add your headshot at<br><code>/assets/img/martyn.jpg</code>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORK ============ -->
+<section class="section" id="work">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="section__num">01 — Roles</span>
+      <h2>Where I spend my time</h2>
+    </div>
+
+    <div class="roles">
+      <div class="role">
+        <div class="role__org"><a href="https://tillo.io" target="_blank" rel="noopener">Tillo</a></div>
+        <div class="role__role">
+          CTO, COO &amp; CIO
+          <span class="sub">Ten years scaling a global B2B rewards &amp; incentives platform — leading engineering, operations and information across rapid growth.</span>
+        </div>
+        <div class="role__meta">2016 — Present</div>
+      </div>
+
+      <div class="role">
+        <div class="role__org"><a href="https://www.brightoncto.com" target="_blank" rel="noopener">Brighton CTO</a></div>
+        <div class="role__role">
+          Co-organiser
+          <span class="sub">Bringing together the South Coast's senior technology leaders to share what actually works.</span>
+        </div>
+        <div class="role__meta">Community</div>
+      </div>
+
+      <div class="role">
+        <div class="role__org"><a href="https://www.cmyc.co.uk/" target="_blank" rel="noopener">Crawley Mariners YC</a></div>
+        <div class="role__role">
+          Vice-Commodore of Sailing · RYA Power Boat Instructor
+          <span class="sub">Volunteer leadership at a member-run sailing club — safety, training and getting more people on the water.</span>
+        </div>
+        <div class="role__meta">Volunteer</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="section__num">02 — About</span>
+      <h2>The short version</h2>
+    </div>
+
+    <div class="about__grid">
+      <p class="about__lead">I sit at the join between technology, operations and the business — the place where strategy either becomes real or quietly stalls.</p>
+      <div class="about__body">
+        <p>Over ten years at Tillo I've held the CTO, COO and CIO seats — often more than one at a time — through the messy, rewarding work of scaling a B2B SaaS business. That range is deliberate: the hardest problems in a growing company rarely respect the org chart, and the leaders who move the needle are the ones fluent in engineering, operations and commercial reality at once.</p>
+        <p>I care about building teams that ship, systems that scale, and decisions that hold up under pressure. Increasingly I'm thinking and writing about how AI reshapes leadership itself — not the tooling, but the judgement, accountability and pace it demands of the people at the top.</p>
+        <p>Away from the desk you'll find me on the water as Vice-Commodore of Sailing at CMYC, or comparing notes with fellow leaders at Brighton CTO.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WRITING ============ -->
+<section class="section" id="writing">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="section__num">03 — Writing</span>
+      <h2>On AI &amp; leadership</h2>
+    </div>
+
+    <div class="posts">
+      {%- assign posts = site.posts | slice: 0, site.home_posts_limit -%}
+      {%- if posts.size > 0 -%}
+        {%- for post in posts -%}
+        <a class="post-card" href="{{ post.url }}">
+          <span class="post-card__date">{{ post.date | date: "%b %Y" }}</span>
+          <div>
+            <h3 class="post-card__title">{{ post.title }}</h3>
+            <p class="post-card__excerpt">{{ post.description | default: post.excerpt | strip_html | truncate: 150 }}</p>
+            <span class="post-card__more">Read &rarr;</span>
+          </div>
+        </a>
+        {%- endfor -%}
+      {%- else -%}
+        <p class="empty-note">First post coming soon.</p>
+      {%- endif -%}
+    </div>
+
+    {%- if site.posts.size > site.home_posts_limit -%}
+    <p style="margin-top:2rem;"><a class="btn btn--ghost" href="/writing/">All writing &rarr;</a></p>
+    {%- endif -%}
+  </div>
+</section>
+
+<!-- ============ CONNECT ============ -->
+<section class="section connect" id="connect">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="section__num">04 — Connect</span>
+      <h2>Let's talk</h2>
+    </div>
+    <p style="font-size:var(--step-1);max-width:46ch;">Open to advisory and board conversations, and always happy to compare notes with fellow technology and operations leaders. LinkedIn is the best place to reach me.</p>
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="https://www.linkedin.com/in/martynfagg" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zM8.5 8h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4.03 0 4.78 2.65 4.78 6.1V24h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.65 1.8-2.65 3.65V24h-4V8z"/></svg>
+        /in/martynfagg
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NAME NOTE ============ -->
+<aside class="namenote" aria-label="About the name">
+  <div class="wrap">
+    <span class="namenote__glyph" aria-hidden="true">μ<span class="phi">φ</span></span>
+    <div class="namenote__text">
+      <p><span class="say">"MuPhi"</span> is <b>μ</b> (mu) and <b>φ</b> (phi) — the Greek letters for my initials, MF. Say it <span class="say"><b>myoo</b> (rhymes with mew) <b>fye</b> (rhymes with tie)</span>. <span class="not">It is emphatically not "muffy".</span></p>
+    </div>
+  </div>
+</aside>
